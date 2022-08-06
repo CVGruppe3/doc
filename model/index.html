@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview-of-the-structure-of-the-model-we-have-chosen" class="md-skip">
+        <a href="#model" class="md-skip">
           Skip to content
         </a>
       
@@ -203,8 +203,20 @@
 
 
   <li class="md-tabs__item">
-    <a href="../business_plan/" class="md-tabs__link">
-      Business
+    <a href="../business_case/" class="md-tabs__link">
+      Business Case
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../business_strategy/" class="md-tabs__link">
+      Business Strategy
     </a>
   </li>
 
@@ -241,6 +253,18 @@
 
 
   <li class="md-tabs__item">
+    <a href="../architecture/" class="md-tabs__link">
+      Architecture
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
     <a href="../user_expert_servey/" class="md-tabs__link">
       Surveys
     </a>
@@ -255,18 +279,6 @@
   <li class="md-tabs__item">
     <a href="../team/" class="md-tabs__link">
       Team
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../demo/" class="md-tabs__link">
-      Demo
     </a>
   </li>
 
@@ -343,8 +355,23 @@
   
   
     <li class="md-nav__item">
-      <a href="../business_plan/" class="md-nav__link">
-        Business
+      <a href="../business_case/" class="md-nav__link">
+        Business Case
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../business_strategy/" class="md-nav__link">
+        Business Strategy
       </a>
     </li>
   
@@ -407,22 +434,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#technical-overview" class="md-nav__link">
-    Technical overview
+  <a href="#requirements" class="md-nav__link">
+    Requirements
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#hardware-requirements" class="md-nav__link">
-    Hardware Requirements
+  <a href="#model_1" class="md-nav__link">
+    Model
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#outlook-for-the-model" class="md-nav__link">
-    Outlook for the Model
+  <a href="#training" class="md-nav__link">
+    Training
   </a>
   
 </li>
@@ -431,6 +458,21 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        Architecture
+      </a>
     </li>
   
 
@@ -465,21 +507,6 @@
   
 
     
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../demo/" class="md-nav__link">
-        Demo
-      </a>
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -507,22 +534,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#technical-overview" class="md-nav__link">
-    Technical overview
+  <a href="#requirements" class="md-nav__link">
+    Requirements
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#hardware-requirements" class="md-nav__link">
-    Hardware Requirements
+  <a href="#model_1" class="md-nav__link">
+    Model
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#outlook-for-the-model" class="md-nav__link">
-    Outlook for the Model
+  <a href="#training" class="md-nav__link">
+    Training
   </a>
   
 </li>
@@ -541,14 +568,30 @@
                 
 
 
-<h1 id="overview-of-the-structure-of-the-model-we-have-chosen">Overview of the structure of the model we have chosen</h1>
-<h2 id="technical-overview">Technical overview</h2>
-<p>In this section, the technical view of our project is presented. First, the following figure summarizes the tech stack that we used.</p>
-<p><img alt="" src="./docs/assets/images/TechStack.png" /></p>
-<h2 id="hardware-requirements">Hardware Requirements</h2>
-<p>Why do we think a Jetson anano is not necessary for our project!!!</p>
-<h2 id="outlook-for-the-model">Outlook for the Model</h2>
-<p>More fruits and vegetables as well as federated learning and customizable front ends.</p>
+<h1 id="model">Model</h1>
+<h2 id="requirements">Requirements</h2>
+<p>Our model imposes technical requirements:</p>
+<ul>
+<li>It must be able to recognize multiple classes</li>
+<li>It must run in real time</li>
+<li>It must be small enough to run on the Jetson Nano</li>
+</ul>
+<p>To measure the quality of our model, we did not focus solely on metrics but rather on satisfying the following use case:</p>
+<p><em>A person brings one or more fruit and/or vegetable objects to be recognized into the image. The objects are included in the POS system if the objects are recognized by the model over a certain time period t with a certain probability p.</em></p>
+<p>As for specific values we set our goal to achieve a probability of over p = 0.85 for over t = one second to add the detected object to the POS System. If our model does not make any mistakes during the process of a simulated purchase process, we would consider our quality requirement as satisfied.</p>
+<p>1.</p>
+<h2 id="model_1">Model</h2>
+<p>Out of the many object detection algorithms, we decided to use the YOLO framework after research. Yolo is based on a CNN structure and detects objects in real time. Because of the CNN structure, the algorithm requires only a single forward propagation in the neural network to detect objects. Furthermore, Yolo detects multiple classes and their bounding boxes simultaneously. The YOLO Framework offers a variety of advantages:</p>
+<ul>
+<li>Speed: The algorithms can predict objects in real-time.</li>
+<li>High accuracy: YOLO is a predictive technique that provides accurate results with minimal background errors.</li>
+<li>Learning capabilities: The algorithm has learning capabilities that enable it to learn the representations of objects and apply them in object detection.</li>
+</ul>
+<p>1.</p>
+<h2 id="training">Training</h2>
+<p>We trained our model with google Colab.</p>
+<p><a href="https://colab.research.google.com/github/roboflow-ai/yolov5-custom-training-tutorial/blob/main/yolov5-custom-training.ipynb#scrollTo=eaFNnxLJbq4J">https://colab.research.google.com/github/roboflow-ai/yolov5-custom-training-tutorial/blob/main/yolov5-custom-training.ipynb#scrollTo=eaFNnxLJbq4J</a></p>
+<p>Of the different model sizes, we opted for the smallest Yolo5n. We found a batch size of 16 and an era size of 50 to be sufficient</p>
 
               
             </article>
@@ -585,13 +628,13 @@
       
       
         
-        <a href="../user_expert_servey/" class="md-footer__link md-footer__link--next" aria-label="Next: Surveys" rel="next">
+        <a href="../architecture/" class="md-footer__link md-footer__link--next" aria-label="Next: Architecture" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Surveys
+              Architecture
             </div>
           </div>
           <div class="md-footer__button md-icon">

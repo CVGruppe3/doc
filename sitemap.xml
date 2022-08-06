@@ -11,17 +11,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://CVGruppe3.github.io/Object/business_plan/</loc>
+         <loc>http://CVGruppe3.github.io/Object/architecture/</loc>
+         <lastmod>2022-08-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://CVGruppe3.github.io/Object/business_case/</loc>
+         <lastmod>2022-08-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://CVGruppe3.github.io/Object/business_strategy/</loc>
          <lastmod>2022-08-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://CVGruppe3.github.io/Object/data/</loc>
-         <lastmod>2022-08-06</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>http://CVGruppe3.github.io/Object/demo/</loc>
          <lastmod>2022-08-06</lastmod>
          <changefreq>daily</changefreq>
     </url>

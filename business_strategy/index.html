@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="http://CVGruppe3.github.io/Object/data/">
+        <link rel="canonical" href="http://CVGruppe3.github.io/Object/business_strategy/">
       
       <link rel="icon" href="../assets/images/favicon.ico">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
     
       
-        <title>Data - Grocery Vision</title>
+        <title>Business Strategy - Grocery Vision</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#data-generation" class="md-skip">
+        <a href="#business-strategy" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Data
+              Business Strategy
             
           </span>
         </div>
@@ -212,10 +212,12 @@
         
   
   
+    
+  
 
 
   <li class="md-tabs__item">
-    <a href="../business_strategy/" class="md-tabs__link">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
       Business Strategy
     </a>
   </li>
@@ -224,12 +226,10 @@
         
   
   
-    
-  
 
 
   <li class="md-tabs__item">
-    <a href="./" class="md-tabs__link md-tabs__link--active">
+    <a href="../data/" class="md-tabs__link">
       Data
     </a>
   </li>
@@ -368,21 +368,6 @@
 
   
   
-  
-    <li class="md-nav__item">
-      <a href="../business_strategy/" class="md-nav__link">
-        Business Strategy
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
     
   
   
@@ -395,12 +380,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Data
+          Business Strategy
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Data
+        Business Strategy
       </a>
       
         
@@ -419,36 +404,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#data-creation" class="md-nav__link">
-    Data Creation
+  <a href="#21-industry-expertise" class="md-nav__link">
+    2.1. Industry Expertise
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#label-making" class="md-nav__link">
-    Label Making
+  <a href="#22-learnings" class="md-nav__link">
+    2.2. Learnings
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#our-final-dataset" class="md-nav__link">
-    Our final dataset
+  <a href="#23-benefits" class="md-nav__link">
+    2.3. Benefits
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#possible-extensions" class="md-nav__link">
-    Possible Extensions
+  <a href="#24-future-business-strategy" class="md-nav__link">
+    2.4. Future Business strategy
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#learnings" class="md-nav__link">
-    Learnings
+  <a href="#25-overall-learnings" class="md-nav__link">
+    2.5. Overall Learnings
   </a>
   
 </li>
@@ -457,6 +442,21 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data/" class="md-nav__link">
+        Data
+      </a>
     </li>
   
 
@@ -548,36 +548,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#data-creation" class="md-nav__link">
-    Data Creation
+  <a href="#21-industry-expertise" class="md-nav__link">
+    2.1. Industry Expertise
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#label-making" class="md-nav__link">
-    Label Making
+  <a href="#22-learnings" class="md-nav__link">
+    2.2. Learnings
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#our-final-dataset" class="md-nav__link">
-    Our final dataset
+  <a href="#23-benefits" class="md-nav__link">
+    2.3. Benefits
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#possible-extensions" class="md-nav__link">
-    Possible Extensions
+  <a href="#24-future-business-strategy" class="md-nav__link">
+    2.4. Future Business strategy
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#learnings" class="md-nav__link">
-    Learnings
+  <a href="#25-overall-learnings" class="md-nav__link">
+    2.5. Overall Learnings
   </a>
   
 </li>
@@ -596,73 +596,47 @@
                 
 
 
-<h1 id="data-generation">Data Generation</h1>
-<p>To gather sufficient data for training, we decided to create the data synthetically. Synthetic generation of training data allows us to create a large amount of data in a short time and allows for fast adaptability to new vegetables and fruits. Also, annotations can be stored at the same time as the picture is created. It is not necessary to manually label the pictures.</p>
-<h2 id="data-creation">Data Creation</h2>
-<p>For the realization of our proof-of-concept we decided to use a limited number of vegetables and fruits. The concept of creating synthetic data relies on using a random picture and printing the items that the model must detect on them.</p>
-<p>In our case, one of 60 random background images served as the basis for the synthetic images. Since more than thousand images must be created for our training, 60 background images did not provide enough variety. Our initial tries revealed that adding additional noise to the background of the image improved the models accuracy. Therefore, we added another step that modifies the background before placing the fruit and vegetable items on the background. We made use of a collection of random objects such as cars, screwdrivers, chairs, etc. which were randomly placed on the background. We also made sure to add hands to our collection of noise items. Adding a high number of noise items to the background ensures that the background of each image is unique.</p>
-<p>We limited the model to recognize only a handful of fruits and vegetables: Eggplant, Avocado, Cucumber, Sweet Potato and Lemon.</p>
-<table>
-<thead>
-<tr>
-<th>Eggplant</th>
-<th>Avocado</th>
-<th>Cucumber</th>
-<th>Sweet Potato</th>
-<th>Lemon</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img alt="" src="../assets/images/Eggplant.png" /></td>
-<td><img alt="" src="../assets/images/Avocado.png" /></td>
-<td><img alt="" src="../assets/images/Cucumber.jpeg" /></td>
-<td><img alt="" src="../assets/images/Sweet_potato.JPG" /></td>
-<td><img alt="" src="../assets/images/Zitrone.png" /></td>
-</tr>
-</tbody>
-</table>
-<p>We took 30 to 40 pictures for each vegetable and fruit class. Most of the pictures were taken by us. In a second step, we used an image editing program to cut out the individual objects to get rid of the background. Some images were used from the &quot;Fruits360&quot; Dataset from Kaggle.com. The cut-out elements were then randomly placed on the background images after applying modifying the background with noise items. To improve the class predictions of our model, we randomly rotate and resize each object before placing it on to the picture. We also allow overlapping of up to 10%. Overlapping ensures that the model recognizes the vegetables early, even if there are still hands covering the vegetables or fruits or the vegetables and fruits cover each other to a certain degree. Our final images that we used to train our model had about 1-5 vegetable and fruit objects.</p>
-<p>The images we used to create our synthetic data can be accessed <a href="https://drive.google.com/drive/folders/1I6pUovgsugu6mKjATuBTfGWS__Y3UDxg?usp=sharing">here:</a></p>
-<p>drive.google.com/drive/folders/1I6pUovgsugu6mKjATuBTfGWS__Y3UDxg?usp=sharing</p>
-<h2 id="label-making">Label Making</h2>
-<p>The location of an item plotted on the image is randomly chosen and stored to a text file at the same time. Since we are training a Yolo model, the format in which class and location information is stored to the corresponding conventions.</p>
-<h2 id="our-final-dataset">Our final dataset</h2>
-<p>By creating synthetic images, we can assume that we have avoided making man-made errors like grouping, positioning or selection are bypassed. However, we cannot exclude that our generated images are not completely unbiased. The way we captured images and cropped the objects is a key element for creating our data. Errors on this level can have a strong impact on the synthetically generated images.</p>
-<p><img alt="" src="RackMultipart20220806-1-vfo3qe_html_1ffd2f0fef9791a9.jpg" /></p>
-<p>Our final dataset consisted of 7000 images which we split into 80% training data and 20% test data.</p>
-<h2 id="possible-extensions">Possible Extensions</h2>
+<h1 id="business-strategy">Business Strategy</h1>
+<h2 id="21-industry-expertise">2.1. Industry Expertise</h2>
+<p>Since our group had no prior experience in the supermarket industry, we decided to reach out to different industry experts. Not only did we contact many supermarket and discounter chains, but also a variety of POS-System providers. To our advantage, we received a reply from Manfred Kiffe, the managing director of PROCOM iPOS Systems GmbH, who told us that he would be happy to share his 30 years of know-how with us. In preparation for this telephone interview, we decided to formulate some questions we would like to get answered:</p>
 <ol>
-<li><strong>Introducing new objects</strong></li>
+<li><strong>Presentation of our idea/solution</strong></li>
 </ol>
-<p>Introducing new elements is a challenge for our model. To add new objects to the model we recommend transfer learning. This is done by transferring the learning progress of the existing model to the new one. This results in advantages such as faster creation, better model quality and less resource usage.</p>
+<p>In general, Mr. Kiffe found our idea very good, and he mentioned a few times that we should not be discouraged. Beforehand we sent him a demo video so that he could get a better understanding of how our solution works. His opinion was that we came up with an innovative idea that could have a lot of potential. He also said that he had contacts to innovative partners that he could put us in touch with and that we could also contact the development department of his company that programs the POS software. Furthermore, he also told us to keep him informed about the development of our project and to contact him again if we have any questions.</p>
 <ol>
-<li><strong>Improving the model</strong></li>
+<li><strong>Overall potential of our solution</strong></li>
 </ol>
-<p>Furthermore, our model can be improved by active learning. In active learning mode, every object recognition that is not recalled by the cashier is perceived as correct. Any object recognition that is recalled by the cashier is perceived as false. This mode requires special attention from the cashiers. However, if our system is used in large supermarket chains, the effort would be very limited, due to having only a few cashiers work in active learning mode for only a few hours creates large amount of data. The amount of additional training data that would be generated would quickly improve the models with little effort.</p>
-<h2 id="learnings">Learnings</h2>
+<p>Mr. Kiffe believed our solution could be successful in the medium to long term. For large chains (Edeka, Rewe) our solution would be attractive if we have a low error rate in our model. He said that in the supermarket industry the margins are very low and really attention is paid to every possible saving. Therefore, our solution would be relevant for the big chains if we could actually present a cost benefit, such as staff savings in the long run. Possible difficulties for us that he had mentioned were, among others, that the big chains like Edeka already have their own internal software houses that research innovative ideas long in advance of the actual implementation. He said that POS-Systems have an average life span of about 7 years and the contracts with the POS-System manufacturers are made well in advance. As a second hurdle, he said that in his eyes &quot;banal&quot; innovations take a very long time to appear on the market and are then also partly taken off the market again due to too high error rates. As an example, he had mentioned the voice output at the cash register, which e.g., says out loud the amount of change for the hearing impaired. Or also that many stores have partially implemented the self-service checkout, but since with this too often still employees had to intervene, were dismantled again. For these reasons, he felt that it might take a very long time for our solution to appear on the market.</p>
 <ol>
-<li><strong>Background Noise</strong></li>
+<li><strong>Is our idea with the interface to the POS-Software and the scale at all feasible?</strong></li>
 </ol>
-<p>We started generating our data by not adding additional noise items on to the background before adding the objects that must be detected by the model. Creating data that way does not deliver enough variety in the background of the picture and results in a model that does not perform well. Our intention when adding random noise objects on the pictures is to create a unique looking background for each photo. Adding additional noise items improved our model quality.</p>
+<p>Regarding the interface Mr. Kiffe shared a lot of valuable information. First, he told us that it is quite difficult to create an interface directly to the scale. In order to use the scale directly, we would need a certification in Germany, which is issued by the Federal Physical-Technical Office in Braunschweig. This process is very complex and not even all POS-System manufacturers have such a certification. He also informed us that there is a whole guide which describes what is allowed and what is not (Welmec-Guide). Additionally, in stores that have such a certification, every 2 years the calibration office comes by and looks whether the scale still measures accurately. As this process is quite complex some supermarkets, especially the smaller ones, have no integrated scales in the cash registers. This is then also the reason why in some supermarkets customers must weigh the fresh goods themselves, as these stores do not have checkout systems with integrated scales. Therefore, he said that it is theoretically possible for us to create such an interface directly to the scale, but it could be associated with a lot of work. Instead, he presented a clever alternative. He said we could bypass this certification process if we do not create the interface directly to the scale, but to the POS software, which already has the certification in the ideal case.</p>
 <ol>
-<li><strong>Cut Out</strong></li>
+<li><strong>Would an integration of our solution into existing POS-Systems be at all possible?</strong></li>
 </ol>
-<p>Cropping out images is error prone. Most of us used the &quot;Preview&quot;-App from the Mac to cut out the objects from the original picture. The &quot;Preview&quot;-App offers different tools for that task. There are two main features that we used:</p>
-<ul>
-<li>Intelligent Lasso</li>
-</ul>
-<p>The intelligent Lasso helps the user to cut out objects, by only having to draw a rough outline around the object.</p>
-<ul>
-<li>Magic wand</li>
-</ul>
-<p>The magic wand works color based. The user has to set a start point on the picture and the software adds pixels to the mask based on the degree that the user defines.</p>
-<p>Although the magic wand is the easier tool to use, it causes problems. We noticed that often pixels far outside of the actual objects are also added to the mask (See binary mask on the right side). Since it was mostly just a few pixels and not a larger area we did not see it at first and came across this issue at a very late stage of the project. The problem that that imposes is that bounding box is drawn to big and the model quality is reduced. (See picture on the right)</p>
-<p><img alt="" src="RackMultipart20220806-1-vfo3qe_html_d563979314884c8e.png" /> <img alt="" src="RackMultipart20220806-1-vfo3qe_html_d1f12165a03a0f8f.png" /></p>
+<p>For the integration, Mr. Kiffe was of the opinion that it would make more sense in the first step to decouple the camera software and POS-System software, since this would avoid complications with the different operating systems. As a second step, or long-term solution, he said a direct integration into the POS system would be the optimal solution. However, this would require the POS-System provider to manufacture a system with an integrated camera.</p>
 <ol>
-<li><strong>Image variety</strong></li>
+<li><strong>Do the POS-Systems have a GPU that would be capable of running a machine learning model?</strong></li>
 </ol>
-<p>As for everything in machine learning, it is true that the model is only as good as the data that is used for training. We started with only a few images per class and quickly noticed that there was not enough variety in the original images of objects that we created for generating our data. Initially we had a red bell pepper in our data set. For the red bell pepper, we used images from the fruit360 dataset from Kaggle. Since all these bell pepper pictures had a white reflection somewhere on the skin, the resulting model detected a lot more bell peppers, when not tested on our synthetic data. Either way, we did not include bell pepper in the model.</p>
+<p>Mr. Kiffe said that the absolute top model has an i5 processor. However, this is not the standard. He informed us that most POS-Systems have an Intel J1900 or i3 processor. Therefore, GPU performance is very low. He also said that processes that are taken for granted by customers, such as contactless payments, sometimes push the POS system to the limit, since the WIFI connection in the stores is often not outstanding. On a side note, he also mentioned that a scanner scale costs about 2000€ and the associated cash POS-System another 2000€. This means that if a supermarket has several cash registers, this is a very large investment, especially for the smaller stores.</p>
+<h2 id="22-learnings">2.2. Learnings</h2>
+<p>With the help of our expert interview, we were able to gain many insights. The interview enlightened us that some of our original ideas were good in theory, but not feasible in practice. Initially, we planned to run our model either via a cloud-based platform or via the hardware of the POS system. However, we were told otherwise: firstly, the Internet connection would not be strong enough to run a cloud-based platform, and secondly, the built-in hardware would not be able to run our model.</p>
+<h2 id="23-benefits">2.3. Benefits</h2>
+<p>We want to conclude the business case with the gains that our application brings to the different business ecosystem participants. Our service has several benefits that can be attributed to the different players in the business platform we have created.</p>
+<p>Let&#39;s first take a look at the supermarkets. Since they are the main customers or users of our supermarkets, they are the focus. In supermarkets, it is much easier to train new employees and the time required to do so can be shortened. This means that employees are ready to work faster, make fewer mistakes, especially in the initial phase, and therefore have higher productivity. And consequently, this leads to a reduction in personnel costs.</p>
+<p>Another actor we have already introduced is the supermarket visitor or customer. The actual supermarket visitor or customer can go through the checkout faster and does not have to scan or weigh their products themselves. Compared to other checkout systems, this is a significant advantage and the customer experiences a much faster checkout. simply a simpler customer journey.</p>
+<p>And finally with the last of the 3 players in our business ecosystem, the POS system provider. The POS system provider that would benefit from an integration of our service to have a clear advantage over their competitors with a sophisticated POS system. The main advantage is that the purchase of products can be handled without labeling or PLU codes. And the additional point is that it can easily adapt to changes in the product range.</p>
+<h2 id="24-future-business-strategy">2.4. Future Business strategy</h2>
+<p>We had a very interesting meeting with an industry expert, Mr. Kiffe, who is the CEO of Procom AG. He basically tipped us off that we could develop our company in two ways.</p>
+<p><img alt="Future strategy" src="../assets/images/Future_strategy.png" /></p>
+<p><em>Figure 5: Future Business Strategy</em></p>
+<p>In the first phase, we built an initial prototype for the detection of selected fruits and vegetables.</p>
+<p>As we continue our dynamic development cycle with constant improvements, we will expand the service to all supermarket products</p>
+<p>Pilot projects in various smaller grocery stores</p>
+<p>After these steps, we could decide on a direction where we would integrate our solution into a checkout system of the major discounters in Germany</p>
+<p>The other path would put our focus on business development and expanding the customer base of smaller supermarkets</p>
+<h2 id="25-overall-learnings">2.5. Overall Learnings</h2>
+<p>We learned a lot on our project journey and would like to share some important lessons with you. First of all, everything takes time and even if the tasks seem smaller, just plan some extra time. Another insight is that you should keep building the project over time. Problems and difficulties will arise, so don&#39;t be naive and just take that into account. Finally, talk to industry experts, as they can give you important insights and a different perspective.</p>
 
               
             </article>
@@ -683,7 +657,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../business_strategy/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Business Strategy" rel="prev">
+        <a href="../business_case/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Business Case" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -692,20 +666,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Business Strategy
+              Business Case
             </div>
           </div>
         </a>
       
       
         
-        <a href="../model/" class="md-footer__link md-footer__link--next" aria-label="Next: Model" rel="next">
+        <a href="../data/" class="md-footer__link md-footer__link--next" aria-label="Next: Data" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Model
+              Data
             </div>
           </div>
           <div class="md-footer__button md-icon">

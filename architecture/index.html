@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="http://CVGruppe3.github.io/Object/data/">
+        <link rel="canonical" href="http://CVGruppe3.github.io/Object/architecture/">
       
       <link rel="icon" href="../assets/images/favicon.ico">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
     
       
-        <title>Data - Grocery Vision</title>
+        <title>Architecture - Grocery Vision</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#data-generation" class="md-skip">
+        <a href="#technical-implementation" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Data
+              Architecture
             
           </span>
         </div>
@@ -224,12 +224,10 @@
         
   
   
-    
-  
 
 
   <li class="md-tabs__item">
-    <a href="./" class="md-tabs__link md-tabs__link--active">
+    <a href="../data/" class="md-tabs__link">
       Data
     </a>
   </li>
@@ -250,10 +248,12 @@
         
   
   
+    
+  
 
 
   <li class="md-tabs__item">
-    <a href="../architecture/" class="md-tabs__link">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
       Architecture
     </a>
   </li>
@@ -383,80 +383,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Data
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../data/" class="md-nav__link">
         Data
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#data-creation" class="md-nav__link">
-    Data Creation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#label-making" class="md-nav__link">
-    Label Making
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#our-final-dataset" class="md-nav__link">
-    Our final dataset
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#possible-extensions" class="md-nav__link">
-    Possible Extensions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#learnings" class="md-nav__link">
-    Learnings
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -482,11 +413,66 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../architecture/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Architecture
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Architecture
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inference-time-optimization" class="md-nav__link">
+    Inference time optimization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#issues-and-learnings" class="md-nav__link">
+    Issues and Learnings
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -548,36 +534,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#data-creation" class="md-nav__link">
-    Data Creation
+  <a href="#overview" class="md-nav__link">
+    Overview
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#label-making" class="md-nav__link">
-    Label Making
+  <a href="#inference-time-optimization" class="md-nav__link">
+    Inference time optimization
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#our-final-dataset" class="md-nav__link">
-    Our final dataset
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#possible-extensions" class="md-nav__link">
-    Possible Extensions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#learnings" class="md-nav__link">
-    Learnings
+  <a href="#issues-and-learnings" class="md-nav__link">
+    Issues and Learnings
   </a>
   
 </li>
@@ -596,73 +568,29 @@
                 
 
 
-<h1 id="data-generation">Data Generation</h1>
-<p>To gather sufficient data for training, we decided to create the data synthetically. Synthetic generation of training data allows us to create a large amount of data in a short time and allows for fast adaptability to new vegetables and fruits. Also, annotations can be stored at the same time as the picture is created. It is not necessary to manually label the pictures.</p>
-<h2 id="data-creation">Data Creation</h2>
-<p>For the realization of our proof-of-concept we decided to use a limited number of vegetables and fruits. The concept of creating synthetic data relies on using a random picture and printing the items that the model must detect on them.</p>
-<p>In our case, one of 60 random background images served as the basis for the synthetic images. Since more than thousand images must be created for our training, 60 background images did not provide enough variety. Our initial tries revealed that adding additional noise to the background of the image improved the models accuracy. Therefore, we added another step that modifies the background before placing the fruit and vegetable items on the background. We made use of a collection of random objects such as cars, screwdrivers, chairs, etc. which were randomly placed on the background. We also made sure to add hands to our collection of noise items. Adding a high number of noise items to the background ensures that the background of each image is unique.</p>
-<p>We limited the model to recognize only a handful of fruits and vegetables: Eggplant, Avocado, Cucumber, Sweet Potato and Lemon.</p>
-<table>
-<thead>
-<tr>
-<th>Eggplant</th>
-<th>Avocado</th>
-<th>Cucumber</th>
-<th>Sweet Potato</th>
-<th>Lemon</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img alt="" src="../assets/images/Eggplant.png" /></td>
-<td><img alt="" src="../assets/images/Avocado.png" /></td>
-<td><img alt="" src="../assets/images/Cucumber.jpeg" /></td>
-<td><img alt="" src="../assets/images/Sweet_potato.JPG" /></td>
-<td><img alt="" src="../assets/images/Zitrone.png" /></td>
-</tr>
-</tbody>
-</table>
-<p>We took 30 to 40 pictures for each vegetable and fruit class. Most of the pictures were taken by us. In a second step, we used an image editing program to cut out the individual objects to get rid of the background. Some images were used from the &quot;Fruits360&quot; Dataset from Kaggle.com. The cut-out elements were then randomly placed on the background images after applying modifying the background with noise items. To improve the class predictions of our model, we randomly rotate and resize each object before placing it on to the picture. We also allow overlapping of up to 10%. Overlapping ensures that the model recognizes the vegetables early, even if there are still hands covering the vegetables or fruits or the vegetables and fruits cover each other to a certain degree. Our final images that we used to train our model had about 1-5 vegetable and fruit objects.</p>
-<p>The images we used to create our synthetic data can be accessed <a href="https://drive.google.com/drive/folders/1I6pUovgsugu6mKjATuBTfGWS__Y3UDxg?usp=sharing">here:</a></p>
-<p>drive.google.com/drive/folders/1I6pUovgsugu6mKjATuBTfGWS__Y3UDxg?usp=sharing</p>
-<h2 id="label-making">Label Making</h2>
-<p>The location of an item plotted on the image is randomly chosen and stored to a text file at the same time. Since we are training a Yolo model, the format in which class and location information is stored to the corresponding conventions.</p>
-<h2 id="our-final-dataset">Our final dataset</h2>
-<p>By creating synthetic images, we can assume that we have avoided making man-made errors like grouping, positioning or selection are bypassed. However, we cannot exclude that our generated images are not completely unbiased. The way we captured images and cropped the objects is a key element for creating our data. Errors on this level can have a strong impact on the synthetically generated images.</p>
-<p><img alt="" src="RackMultipart20220806-1-vfo3qe_html_1ffd2f0fef9791a9.jpg" /></p>
-<p>Our final dataset consisted of 7000 images which we split into 80% training data and 20% test data.</p>
-<h2 id="possible-extensions">Possible Extensions</h2>
-<ol>
-<li><strong>Introducing new objects</strong></li>
-</ol>
-<p>Introducing new elements is a challenge for our model. To add new objects to the model we recommend transfer learning. This is done by transferring the learning progress of the existing model to the new one. This results in advantages such as faster creation, better model quality and less resource usage.</p>
-<ol>
-<li><strong>Improving the model</strong></li>
-</ol>
-<p>Furthermore, our model can be improved by active learning. In active learning mode, every object recognition that is not recalled by the cashier is perceived as correct. Any object recognition that is recalled by the cashier is perceived as false. This mode requires special attention from the cashiers. However, if our system is used in large supermarket chains, the effort would be very limited, due to having only a few cashiers work in active learning mode for only a few hours creates large amount of data. The amount of additional training data that would be generated would quickly improve the models with little effort.</p>
-<h2 id="learnings">Learnings</h2>
-<ol>
-<li><strong>Background Noise</strong></li>
-</ol>
-<p>We started generating our data by not adding additional noise items on to the background before adding the objects that must be detected by the model. Creating data that way does not deliver enough variety in the background of the picture and results in a model that does not perform well. Our intention when adding random noise objects on the pictures is to create a unique looking background for each photo. Adding additional noise items improved our model quality.</p>
-<ol>
-<li><strong>Cut Out</strong></li>
-</ol>
-<p>Cropping out images is error prone. Most of us used the &quot;Preview&quot;-App from the Mac to cut out the objects from the original picture. The &quot;Preview&quot;-App offers different tools for that task. There are two main features that we used:</p>
-<ul>
-<li>Intelligent Lasso</li>
-</ul>
-<p>The intelligent Lasso helps the user to cut out objects, by only having to draw a rough outline around the object.</p>
-<ul>
-<li>Magic wand</li>
-</ul>
-<p>The magic wand works color based. The user has to set a start point on the picture and the software adds pixels to the mask based on the degree that the user defines.</p>
-<p>Although the magic wand is the easier tool to use, it causes problems. We noticed that often pixels far outside of the actual objects are also added to the mask (See binary mask on the right side). Since it was mostly just a few pixels and not a larger area we did not see it at first and came across this issue at a very late stage of the project. The problem that that imposes is that bounding box is drawn to big and the model quality is reduced. (See picture on the right)</p>
-<p><img alt="" src="RackMultipart20220806-1-vfo3qe_html_d563979314884c8e.png" /> <img alt="" src="RackMultipart20220806-1-vfo3qe_html_d1f12165a03a0f8f.png" /></p>
-<ol>
-<li><strong>Image variety</strong></li>
-</ol>
-<p>As for everything in machine learning, it is true that the model is only as good as the data that is used for training. We started with only a few images per class and quickly noticed that there was not enough variety in the original images of objects that we created for generating our data. Initially we had a red bell pepper in our data set. For the red bell pepper, we used images from the fruit360 dataset from Kaggle. Since all these bell pepper pictures had a white reflection somewhere on the skin, the resulting model detected a lot more bell peppers, when not tested on our synthetic data. Either way, we did not include bell pepper in the model.</p>
+<h1 id="technical-implementation">Technical Implementation</h1>
+<h2 id="overview">Overview</h2>
+<p>As mentioned in the former section, we used the YoloV5 architecture for our object detection task. We utilized the comprehensive repository from [ultralytics](https://studentkit.sharepoint.com/sites/AISS-AICV/Freigegebene%20Dokumente/General/(https:/github.com/ultralytics/yolov5), which already provided the necessary tools to get us started. As this repository used PyTorch, this was a key dependency for us. Furthermore, to get the video stream from the CSI-camera from the Jetson Nano we used a combination of Gstreamer and OpenCV, which allowed us to run our inference with Yolo framework on each recorded frame.</p>
+<p>In order to present the respective results, the frame that was used for inference was augmented with the bounding boxes around the detected objects with the respective classes and scores.</p>
+<p>As this detection was only one part of our solution, we passed the augmented frame to a webpage where our results were presented in a user-friendly frontend, which was built using JavaScript and Bootstrap. The communication between the Python backend and the webpage was managed by a combination of Flask and SocketIO.</p>
+<p><img alt="Techstack" src="../assets/images/TechStack.png" /></p>
+<p><em>Figure 6: Techstack</em></p>
+<p>Furthermore, we speed up our inference time using the ONNX runtime engine. An overview of our techstack is summarized in Figure 6</p>
+<h2 id="inference-time-optimization">Inference time optimization</h2>
+<p>We first started out using vanilla PyTorch on the CPU for our inference, which turned out to be rather slow as the inference time for one image already took 0,5 seconds, so we could only run our videostream at 1 Frame per second (FPS). As we already used the nano version of the yolo architecture, so the smallest version of the CNN available, we had to find other ways to improve our inference speed. The final solution that we came across was the ONNX runtime engine, an open-source project which is specifically designed to accelerate the machine learning process, in particular the inference step.</p>
+<p>We implemented the ONNX runtime engine by utilizing the <a href="https://zhiqwang.com/yolov5-rt-stack/">yoloRT</a> repository, which made it particularly easy to transform an already existing model in the PyTorch format to the ONNX format. The main simplification provided by this repository is that the transformation of the model format also respects changes that are necessary to use the inference using the ONNX runtime engine in a way that further augmentation of the results is not necessary, like preprocessing the shape of the processed image for a correct display of the bounding boxes. Using this solution, we were able to decrease the inference time by about 44%, from 500ms to 280ms. This allowed us to run our model on 3 FPS, which worked quite well for our solution.</p>
+<p>However, this solution still uses the CPU, as we had problems installing the required packages for our Python version with GPU support.</p>
+<p>The Jetson nano already comes preinstalled with the most used machine learning libraries, compiled with GPU support, however only for the preinstalled Python version 3.6.9. The repositories that we used required us to use Python 3.8 or higher, so we could not use the preinstalled packages in our environment. When we reinstalled the respective packages from PyPi, all of them only supported the CPU or had to recompiled from source with GPU support enabled.</p>
+<p><img alt="Inference Time Optimization" src="../assets/images/InferenceTimeIncrease.png" /></p>
+<p><em>Figure 7: Inference time speed-up</em></p>
+<p>Regardless of these restrictions, with the help of group 2 we found a prebuilt Python wheel for the ONNX runtime engine with GPU support, which could be downloaded and easily installed into our environment. By utilizing the GPU, we could gain a massive improvement of again reducing our inference time by 78.5% down to 60ms, which allowed us to run our model 7FPS. A summary of the inference time improvements is shown in figure 7.</p>
+<h2 id="issues-and-learnings">Issues and Learnings</h2>
+<p><img alt="Encountered Issues" src="../assets/images/EncounteredIssues.png" /></p>
+<p><em>Figure 8: Main compatibilityissues</em></p>
+<p>As in every project we came across multiple issues, however most of them can be summarized under &quot;Compatibility issues&quot;. A short overview is given in figure 8.</p>
+<p>As mentioned in the last section, we had trouble installing the necessary packages with GPU support, since due to our dependencies we were required to use Python 3.8 or newer, however the preinstalled packages with GPU-support that came with the Jetson Nano could only be used with Python 3.6.9. If the packages were installed via pip, the corresponding packages only had CPU support.</p>
+<p>Moreover, at the beginning of our project we started developing a solution on our personal computers that accessed the webcam of a computer via JavaScript, however when we deployed the solution on the Nano, we realized that solution does not work, as the used CSI-Camera was not detected as a webcam. Since we did not find an appropriate solution to this problem, we had to start over with a new solution.</p>
+<p>The main learning we took from this is that we want to increase our use of OS agnostic software solution like Docker, in order to prevent these mistakes from happening again.</p>
 
               
             </article>
@@ -683,7 +611,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../business_strategy/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Business Strategy" rel="prev">
+        <a href="../model/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Model" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -692,20 +620,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Business Strategy
+              Model
             </div>
           </div>
         </a>
       
       
         
-        <a href="../model/" class="md-footer__link md-footer__link--next" aria-label="Next: Model" rel="next">
+        <a href="../user_expert_servey/" class="md-footer__link md-footer__link--next" aria-label="Next: Surveys" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Model
+              Surveys
             </div>
           </div>
           <div class="md-footer__button md-icon">
