@@ -254,7 +254,7 @@
 
   <li class="md-tabs__item">
     <a href="../architecture/" class="md-tabs__link">
-      Architecture
+      Technical Implementation
     </a>
   </li>
 
@@ -266,7 +266,7 @@
 
   <li class="md-tabs__item">
     <a href="../user_expert_servey/" class="md-tabs__link">
-      Surveys
+      Survey
     </a>
   </li>
 
@@ -471,7 +471,7 @@
   
     <li class="md-nav__item">
       <a href="../architecture/" class="md-nav__link">
-        Architecture
+        Technical Implementation
       </a>
     </li>
   
@@ -486,7 +486,7 @@
   
     <li class="md-nav__item">
       <a href="../user_expert_servey/" class="md-nav__link">
-        Surveys
+        Survey
       </a>
     </li>
   
@@ -579,7 +579,6 @@
 <p>To measure the quality of our model, we did not focus solely on metrics but rather on satisfying the following use case:</p>
 <p><em>A person brings one or more fruit and/or vegetable objects to be recognized into the image. The objects are included in the POS system if the objects are recognized by the model over a certain time period t with a certain probability p.</em></p>
 <p>As for specific values we set our goal to achieve a probability of over p = 0.85 for over t = one second to add the detected object to the POS System. If our model does not make any mistakes during the process of a simulated purchase process, we would consider our quality requirement as satisfied.</p>
-<p>1.</p>
 <h2 id="model_1">Model</h2>
 <p>Out of the many object detection algorithms, we decided to use the YOLO framework after research. Yolo is based on a CNN structure and detects objects in real time. Because of the CNN structure, the algorithm requires only a single forward propagation in the neural network to detect objects. Furthermore, Yolo detects multiple classes and their bounding boxes simultaneously. The YOLO Framework offers a variety of advantages:</p>
 <ul>
@@ -587,11 +586,9 @@
 <li>High accuracy: YOLO is a predictive technique that provides accurate results with minimal background errors.</li>
 <li>Learning capabilities: The algorithm has learning capabilities that enable it to learn the representations of objects and apply them in object detection.</li>
 </ul>
-<p>1.</p>
 <h2 id="training">Training</h2>
-<p>We trained our model with google Colab.</p>
-<p><a href="https://colab.research.google.com/github/roboflow-ai/yolov5-custom-training-tutorial/blob/main/yolov5-custom-training.ipynb#scrollTo=eaFNnxLJbq4J">https://colab.research.google.com/github/roboflow-ai/yolov5-custom-training-tutorial/blob/main/yolov5-custom-training.ipynb#scrollTo=eaFNnxLJbq4J</a></p>
-<p>Of the different model sizes, we opted for the smallest Yolo5n. We found a batch size of 16 and an era size of 50 to be sufficient</p>
+<p>We trained our model with google Colab <a href="https://colab.research.google.com/github/roboflow-ai/yolov5-custom-training-tutorial/blob/main/yolov5-custom-training.ipynb#scrollTo=eaFNnxLJbq4J">(colab.research.google.com).</a> Of the different model sizes, we opted for the smallest Yolo5n. We found a batch size of 16 and an era size of 50 to be sufficient.</p>
+<p><img alt="Training Output" src="../assets/images/fig11.png" /></p>
 
               
             </article>
@@ -628,13 +625,13 @@
       
       
         
-        <a href="../architecture/" class="md-footer__link md-footer__link--next" aria-label="Next: Architecture" rel="next">
+        <a href="../architecture/" class="md-footer__link md-footer__link--next" aria-label="Next: Technical Implementation" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Architecture
+              Technical Implementation
             </div>
           </div>
           <div class="md-footer__button md-icon">

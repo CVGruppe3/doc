@@ -15,7 +15,7 @@
     
     
       
-        <title>Architecture - Grocery Vision</title>
+        <title>Technical Implementation - Grocery Vision</title>
       
     
     
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Architecture
+              Technical Implementation
             
           </span>
         </div>
@@ -254,7 +254,7 @@
 
   <li class="md-tabs__item">
     <a href="./" class="md-tabs__link md-tabs__link--active">
-      Architecture
+      Technical Implementation
     </a>
   </li>
 
@@ -266,7 +266,7 @@
 
   <li class="md-tabs__item">
     <a href="../user_expert_servey/" class="md-tabs__link">
-      Surveys
+      Survey
     </a>
   </li>
 
@@ -425,12 +425,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Architecture
+          Technical Implementation
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Architecture
+        Technical Implementation
       </a>
       
         
@@ -486,7 +486,7 @@
   
     <li class="md-nav__item">
       <a href="../user_expert_servey/" class="md-nav__link">
-        Surveys
+        Survey
       </a>
     </li>
   
@@ -573,7 +573,8 @@
 <p>As mentioned in the former section, we used the YoloV5 architecture for our object detection task. We utilized the comprehensive repository from [ultralytics](https://studentkit.sharepoint.com/sites/AISS-AICV/Freigegebene%20Dokumente/General/(https:/github.com/ultralytics/yolov5), which already provided the necessary tools to get us started. As this repository used PyTorch, this was a key dependency for us. Furthermore, to get the video stream from the CSI-camera from the Jetson Nano we used a combination of Gstreamer and OpenCV, which allowed us to run our inference with Yolo framework on each recorded frame.</p>
 <p>In order to present the respective results, the frame that was used for inference was augmented with the bounding boxes around the detected objects with the respective classes and scores.</p>
 <p>As this detection was only one part of our solution, we passed the augmented frame to a webpage where our results were presented in a user-friendly frontend, which was built using JavaScript and Bootstrap. The communication between the Python backend and the webpage was managed by a combination of Flask and SocketIO.</p>
-<p><img alt="Techstack" src="../assets/images/AISS-CV-Vortrag-Techstack.png" /></p>
+<p><img alt="Techstack" src="../assets/images/AISS-CV-Vortrag-Techstack.png#only-light" />
+<img alt="Techstack" src="../assets/images/Techstack_weiss.png#only-dark" /></p>
 <p><em>Figure 6: Techstack</em></p>
 <p>Furthermore, we speed up our inference time using the ONNX runtime engine. An overview of our techstack is summarized in Figure 6</p>
 <h2 id="inference-time-optimization">Inference time optimization</h2>
@@ -585,7 +586,8 @@
 <p><em>Figure 7: Inference time speed-up</em></p>
 <p>Regardless of these restrictions, with the help of group 2 we found a prebuilt Python wheel for the ONNX runtime engine with GPU support, which could be downloaded and easily installed into our environment. By utilizing the GPU, we could gain a massive improvement of again reducing our inference time by 78.5% down to 60ms, which allowed us to run our model 7FPS. A summary of the inference time improvements is shown in figure 7.</p>
 <h2 id="issues-and-learnings">Issues and Learnings</h2>
-<p><img alt="Encountered Issues" src="../assets/images/EncounteredIssues.png" /></p>
+<p><img alt="Encountered Issues" src="../assets/images/EncounteredIssues.png#only-light" />
+<img alt="Encountered Issues" src="../assets/images/CompatibilityIssues_weiss.png#only-dark" /></p>
 <p><em>Figure 8: Main compatibilityissues</em></p>
 <p>As in every project we came across multiple issues, however most of them can be summarized under &quot;Compatibility issues&quot;. A short overview is given in figure 8.</p>
 <p>As mentioned in the last section, we had trouble installing the necessary packages with GPU support, since due to our dependencies we were required to use Python 3.8 or newer, however the preinstalled packages with GPU-support that came with the Jetson Nano could only be used with Python 3.6.9. If the packages were installed via pip, the corresponding packages only had CPU support.</p>
@@ -627,13 +629,13 @@
       
       
         
-        <a href="../user_expert_servey/" class="md-footer__link md-footer__link--next" aria-label="Next: Surveys" rel="next">
+        <a href="../user_expert_servey/" class="md-footer__link md-footer__link--next" aria-label="Next: Survey" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Surveys
+              Survey
             </div>
           </div>
           <div class="md-footer__button md-icon">
