@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>http://CVGruppe3.github.io/Object/all/</loc>
+         <lastmod>2022-08-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>http://CVGruppe3.github.io/Object/architecture/</loc>
          <lastmod>2022-08-08</lastmod>
          <changefreq>daily</changefreq>

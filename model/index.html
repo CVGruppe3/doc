@@ -572,23 +572,29 @@
 <h2 id="requirements">Requirements</h2>
 <p>Our model imposes technical requirements:</p>
 <ul>
-<li>It must be able to recognize multiple classes</li>
+<li>It must be able to detect multiple classes</li>
 <li>It must run in real time</li>
 <li>It must be small enough to run on the Jetson Nano</li>
 </ul>
-<p>To measure the quality of our model, we did not focus solely on metrics but rather on satisfying the following use case:</p>
-<p><em>A person brings one or more fruit and/or vegetable objects to be recognized into the image. The objects are included in the POS system if the objects are recognized by the model over a certain time period t with a certain probability p.</em></p>
-<p>As for specific values we set our goal to achieve a probability of over p = 0.85 for over t = one second to add the detected object to the POS System. If our model does not make any mistakes during the process of a simulated purchase process, we would consider our quality requirement as satisfied.</p>
+<p>Our model imposes qualitative requirements:</p>
+<p>To measure the quality of our model, we did not focus solely on metrics but rather on satisfying our use case:</p>
+<p><em>One or more fruit and/or vegetable items are brought into the scene. The objects are included in the POS system if the objects are detected by the model over a certain time period t.</em></p>
+<p>As for specific values we set our goal to detect an item for t =1.5 seconds. If our model does not make any mistakes during the process of a simulated purchase process, we would consider our quality requirement as satisfied.</p>
 <h2 id="model_1">Model</h2>
-<p>Out of the many object detection algorithms, we decided to use the YOLO framework after research. Yolo is based on a CNN structure and detects objects in real time. Because of the CNN structure, the algorithm requires only a single forward propagation in the neural network to detect objects. Furthermore, Yolo detects multiple classes and their bounding boxes simultaneously. The YOLO Framework offers a variety of advantages:</p>
-<ul>
-<li>Speed: The algorithms can predict objects in real-time.</li>
-<li>High accuracy: YOLO is a predictive technique that provides accurate results with minimal background errors.</li>
-<li>Learning capabilities: The algorithm has learning capabilities that enable it to learn the representations of objects and apply them in object detection.</li>
-</ul>
+<p>Out of the many object detection algorithms, we decided to use the YOLO framework after research. Yolo is based on a CNN structure and detects objects in real time. Because of the CNN structure, the algorithm requires only a single forward propagation in the neural network to detect objects. Furthermore, Yolo detects multiple classes and their bounding boxes simultaneously.</p>
 <h2 id="training">Training</h2>
-<p>We trained our model with google Colab <a href="https://colab.research.google.com/github/roboflow-ai/yolov5-custom-training-tutorial/blob/main/yolov5-custom-training.ipynb#scrollTo=eaFNnxLJbq4J">(colab.research.google.com).</a> Of the different model sizes, we opted for the smallest Yolo5n. We found a batch size of 16 and an era size of 50 to be sufficient.</p>
-<p><img alt="Training Output" src="../assets/images/fig11.png" /></p>
+<p>We trained our model with a <a href="https://colab.research.google.com/github/roboflow-ai/yolov5-custom-training-tutorial/blob/main/yolov5-custom-training.ipynb#scrollTo=eaFNnxLJbq4J">Google Colab Notebook</a>. The resources Google provides were enough for our project. Of the different model sizes, we opted for the smallest &quot;Yolo5n&quot;. We trained our model with a batch size of 16 and an epoch size of 50.</p>
+<p></figure> | <figure markdown>
+  <img alt="Training Output" src="../assets/images/fig11.png" />
+<br />
+<figcaption>Figure 11: Confusion matrix of predicted and actual labels</figcaption></p>
+</figure>
+<p></figure> | <figure markdown>
+  <img alt="Metrics matrix" src="../assets/images/fig%2012.png" />
+<br />
+<figcaption>Figure 12: Metrics matrix of our final model</figcaption></p>
+</figure>
+<p>After 30 epochs of training (Figure 12), one can already observe a clear approximation of metrics. In the following training up to the last epoch the model is improved even more. After the 50 epochs training the model was tested on the test set with good results. The test set was designed in the same way as the entire dataset and was separated by a train_test_split before training. This means that the test ser also consists of purely synthetic generated data. From this, the confusion-matrix shown in Figure 11 was obtained. The number of incorrectly detected objects from other classes is very low on the test set and promises good performance.</p>
 
               
             </article>

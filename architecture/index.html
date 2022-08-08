@@ -642,7 +642,7 @@ def video():
     }
 }
 </code></pre>
-<p>A product needs to be detected for a certain number of consecutive frames in order to be added to the shopping cart. The duration in which an item must be detected to be added to the shopping list is determined by two components: First, the framerate and second, the number of frames threshold (we set it to 10 Frames). If the threshold is reached and a product is detected for 10 frames, a server generated SocketIO event is emitted to the connected client. This is how changes are communicated between backend and frontend. </p>
+<p>A product needs to be detected for a certain number of consecutive frames in order to be added to the shopping cart. The duration in which an item must be detected to be added to the shopping list is determined by two components: First, the framerate and second, the number of frames threshold (we set it to 11 Frames). If the threshold is reached and a product is detected for 11 frames, a server generated SocketIO event is emitted to the connected client. This is how changes are communicated between backend and frontend. </p>
 <h2 id="frontend">Frontend</h2>
 <p>We added a user-friendly frontend to our Grocery Vision prototype in order to demonstrate the functionality in a real-life way.</p>
 <p><img alt="Frontend" src="../assets/images/frontend.png" /></p>
@@ -653,7 +653,7 @@ def video():
   report: {
     zitrone: {
       count: 1,
-      since_frames: 10
+      since_frames: 11
     }
   }
 }
